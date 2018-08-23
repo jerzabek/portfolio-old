@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  font-family: 'Fira Mono', monospace;
+  height: 100%;
+}
+
+.main-title {
+    font-weight: 700;
+}
+
+.header {
+  margin-top: -5%;
+}
+
+.lsp {
+  letter-spacing: 6px;
+}
+
+.list-item:hover, .link:hover {
+  text-decoration: underline;
+}
+
+.link-underline:link {
+  text-decoration: underline;
+}
+
+.link-underline:hover {
+  text-decoration: none;
+}
+
+.list-item a, .list-item a:link, .list-item a:visited, .list-item a:active,
+.link:link, .link:visited, .link:active, .link {
+  color: black;
+}
+
+.color-black {
+  border-top-color: black;
+}
+
+.navbar {
+  font-weight: 500;
+}
+
+.about-page p {
+  letter-spacing: 3px;
+}

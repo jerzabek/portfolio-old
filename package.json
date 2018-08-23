@@ -1,0 +1,20 @@
+{
+  "name": "jarzawebsite",
+  "version": "1.0.0",
+  "description": "Personal website/portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "coding",
+    "programming",
+    "jarza"
+  ],
+  "author": "Ivan Jerzabek",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
