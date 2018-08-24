@@ -1,2 +1,2 @@
 # portfolio
-Personal portfolio website.
+Personal portfolio website running on a Nodejs server.
