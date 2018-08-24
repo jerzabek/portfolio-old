@@ -12,6 +12,10 @@ app.get('/about', function (req, res) {
   res.render('about/index');
 })
 
+app.get('/peepocop', function (req, res) {
+  res.render('peepocop/index');
+})
+
 app.get('/404', function (req, res) {
   res.render('404/index');
 })

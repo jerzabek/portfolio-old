@@ -51,6 +51,25 @@ html, body {
   font-weight: 500;
 }
 
-.about-page p {
+pre {
+  /* border: 2px solid gray; */
+  border-radius: 1em;
+}
+
+.spacing p {
   letter-spacing: 3px;
+}
+
+
+@media (max-width: 576px) {
+  .disp-4{
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 577px) {
+  .disp-4{
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
 }

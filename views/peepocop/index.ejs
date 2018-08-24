@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project - jarza</title>
+    <meta name="author" content="Ivan Jerzabek">
+    <meta name="description" content="A brief description of a project of mine">
+    <meta name="keywords" content="ivan jerzabek, jarza, coding, java, programing">
+    <link rel="shortcut icon" type="image/png" href="../imgs/favico.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <script src="../scripts/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container minh-100 justify-content-between mb-5 mb-md-0">
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="/">jarza</a>
+        <a class="link" href="/about">about</a>
+      </nav>
+
+      <div class="h-100 ">
+        <h1 class="main-title disp-4">A cross banning bot for Discord</h1>
+        <h2 class="disasp-4 pb-5 font-italic">Also known as PeepoCop</h2>
+        <h4 class="text-center">How did this project get started?</h4>
+        <p class="text-center">I spend a lot of time on Discord (for those who don't know, Discord's an online chatting platform sort of like Skype, but aimed at gamers) talking to people about all kinds of things so it is no surprise that every now and again I'll find myself in a conversation about Discord bots, programming or something like that. In those conversations I often share my coding experience and some examples of what I've done.</p>
+        <p class="text-center">Soon enough the owner of <a class="link link-underline font-italic" href="https://frogsdreamworld.com/">one of the largest Discord servers</a> in existence noticed my skill and hired me to develop a bot that bans people in multiple servers, or guilds as Discord calls them, at once. So when I found the time I worked on the bot, finished it and let it run on a VPS, more details about that in the following chapters.</p>
+
+        <h4 class="text-center pt-4">How does a bot work?</h4>
+        <p class="text-center">A Discord bot is nothing more than a program that can listen for commands typed in the chat, and then do something. The Discord API gives developers the tools to do lots of neat things, and there are many open source libraries that act as wrappers for the Discord API, written in many different languages, so you can pick your favourite language and immediately get to work! I obviously chose a library written in Java - <a class="link link-underline font-italic" href="https://github.com/discord4j">Discord4J</a>.</p>
+        <p class="text-center">When I was writing the bot I used version 2 of this library, since it was the newest and most stable, but they're working on version 3.0 which completely changes the library, it uses <a class="link link-underline font-italic" href="https://projectreactor.io/">Reactor</a> and is focused on event driven and functional programming, which is just one of the many things I have learned because of this project.</p>
+
+        <h4 class="text-center pt-4">Deployment!</h4>
+        <p class="text-center">The bot needs to be operational 24/7 which is why we purchased a VPS and run the bot on it. I can use IntelliJ to build the bot into a single JAR file, and since I use Maven I don't have to worry about dependencies, because they get built into the jar file automatically! We also run a MySQL server locally on the VPS so that the bot can store whatever information it needs to store.</p>
+        <p class="text-center">I then wrote a simple bash script, which runs the jar file as soon as the program finishes executing, which results in minimal downtime for the bot. When I want to update the bot I just connect to the VPS, upload the new jar file via SFTP and turn of the already running bot through a command in chat. The bash script will run the new jar and the bot will launch again! Here is the script:</p>
+
+        <pre><code class="bash">while true
+do
+  java -jar -Xmx3584m peepocop.jar |& tee -a logs.txt
+done</code></pre>
+
+        <p class="text-center">The script also <span class="font-italic">pipes</span> the bots console output into a file for logging AND displays it in the console on the VPS.</p>
+
+
+        <h4 class="text-center pt-4">Finally:</h4>
+        <p class="text-center">In the future I'd love to upgrade the bot to Discord4j v3 and Containerize the bot using Docker, but as of right now I don't have the time nor the experience to do either of those two things. But that won't stop me from achieving those goals, I just have to learn and practice with new technologies.</p>
+        <p class="text-center">Thank you for reading!</p>
+      </div>
+    </div>
+    <footer class="page-footer font-small text-light bg-dark pt-4 mt-5">
+      <div class="container text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3 text-center text-md-left">
+            <!-- <h5 class="text-uppercase font-weight-bold">Contact:</h5> -->
+            <p class=" p-md-2">jerzabek.ivan@gmail.com</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-6 mb-md-0 mb-3  text-center text-md-right">
+            <div class="footer-copyright p-md-2 pb-3 ">Copyright © 2018 Jarza</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
