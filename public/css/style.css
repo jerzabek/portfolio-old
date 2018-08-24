@@ -22,6 +22,10 @@ html, body {
   letter-spacing: 6px;
 }
 
+.minh-100 {
+  min-height: 100%;
+}
+
 .list-item:hover, .link:hover {
   text-decoration: underline;
 }
