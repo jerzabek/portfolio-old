@@ -24,12 +24,10 @@ html, body {
 
 .list-item:hover, .link:hover {
   text-decoration: underline;
-  text-decoration-style: dashed;
 }
 
 .link-underline:link {
   text-decoration: underline;
-  text-decoration-style: dashed;
 }
 
 .link-underline:hover {

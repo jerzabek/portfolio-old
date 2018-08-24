@@ -22,5 +22,5 @@ app.listen(process.env.PORT, function () {
 })
 
 app.get('*', function (req, res) {
-  res.redirect('404/index');
+  res.render('404/index');
 })
