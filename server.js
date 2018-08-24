@@ -16,9 +16,9 @@ app.get('/404', function (req, res) {
   res.render('404/index');
 })
 
-
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+const port = process.env.PORT || 3000
+app.listen(port, function () {
+console.log("Listening on port " + port)
 })
 
 app.get('*', function (req, res) {
