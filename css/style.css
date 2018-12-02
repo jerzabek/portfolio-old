@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
+
+html, body, * {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  font-family: 'Fira Mono', monospace;
+  height: 100%;
+}
+
+.main-title {
+    font-weight: 700;
+}
+
+.ime {
+  color: #fff;
+  border-radius: 0.4em;
+  background-color: #212529;
+  padding: 30px;
+}
+
+.header {
+  margin-top: -5%;
+}
+
+.lsp {
+  letter-spacing: 6px;
+}
+
+.minh-100 {
+  min-height: 100%;
+}
+
+.list-item:hover, .link:hover {
+  text-decoration: underline;
+}
+
+.link-underline:link {
+  text-decoration: underline;
+}
+
+.link-underline:hover {
+  text-decoration: none;
+}
+
+.list-item a, .list-item a:link, .list-item a:visited, .list-item a:active,
+.link:link, .link:visited, .link:active, .link {
+  color: black;
+}
+
+.color-black {
+  border-top-color: black;
+}
+
+.navbar {
+  font-weight: 500;
+}
+
+pre {
+  /* border: 2px solid gray; */
+  border-radius: 1em;
+}
+
+.spacing>p {
+  letter-spacing: 3px;
+}
+
+.spacing-2 {
+  letter-spacing: 1px;
+}
+
+.img {
+  max-width: 40%;
+}
+
+.projectCard {
+  color: #212529;
+  background-color: #fff;
+  transition: 150ms;
+}
+
+.projectCard:hover {
+  color: #fff;
+  background-color: #212529;
+  transition: 150ms;
+}
+
+.projectCard:hover .text-muted {
+  color: #fff!important;
+  transition: 150ms;
+}
+
+
+@media (max-width: 768px) {
+  .img {
+    max-width: 28em;
+  }
+}
+@media (max-width: 576px) {
+  .disp-4{
+    font-size: 2.5rem;
+  }
+
+  .img {
+    max-width: 24em;
+  }
+}
+
+@media (min-width: 577px) {
+  .disp-4{
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
