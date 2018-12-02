@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
 
-* {
+html, body, * {
   margin: 0px;
   padding: 0px;
 }
@@ -12,6 +12,13 @@ html, body {
 
 .main-title {
     font-weight: 700;
+}
+
+.ime {
+  color: #fff;
+  border-radius: 0.4em;
+  background-color: #212529;
+  padding: 30px;
 }
 
 .header {
@@ -56,14 +63,48 @@ pre {
   border-radius: 1em;
 }
 
-.spacing p {
+.spacing>p {
   letter-spacing: 3px;
 }
 
+.spacing-2 {
+  letter-spacing: 1px;
+}
 
+.img {
+  max-width: 40%;
+}
+
+.projectCard {
+  color: #212529;
+  background-color: #fff;
+  transition: 150ms;
+}
+
+.projectCard:hover {
+  color: #fff;
+  background-color: #212529;
+  transition: 150ms;
+}
+
+.projectCard:hover .text-muted {
+  color: #fff!important;
+  transition: 150ms;
+}
+
+
+@media (max-width: 768px) {
+  .img {
+    max-width: 28em;
+  }
+}
 @media (max-width: 576px) {
   .disp-4{
     font-size: 2.5rem;
+  }
+
+  .img {
+    max-width: 24em;
   }
 }
 
