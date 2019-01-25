@@ -92,7 +92,9 @@ pre {
   transition: 150ms;
 }
 
-
+.list50 {
+  width: 50%;
+}
 
 @media (max-width: 768px) {
   .img {
@@ -101,6 +103,10 @@ pre {
 
   .main-title {
     font-size: 2.5rem!important;
+  }
+
+  .list50 {
+    width: 100%;
   }
 }
 @media (max-width: 576px) {
