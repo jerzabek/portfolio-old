@@ -21,6 +21,10 @@ html, body {
   padding: 30px;
 }
 
+.icon {
+  width: 3.5em;
+}
+
 .header {
   margin-top: -5%;
 }
